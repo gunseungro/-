@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+
+@theme {
+  --font-sans: "Pretendard", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-navy: #042f74;
+  --color-brand-blue: #1454ff;
+  --color-brand-light: #f8fafc;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-slate-900 bg-white;
+  }
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;
+}
+
+.btn-primary {
+  @apply bg-brand-navy text-white px-6 py-3 rounded-lg font-semibold hover:bg-brand-blue transition-colors duration-300 flex items-center justify-center gap-2;
+}
+
+.btn-secondary {
+  @apply bg-brand-blue text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity duration-300 flex items-center justify-center gap-2;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl font-bold text-center mb-12 text-brand-navy tracking-tight;
+}
+
+.card-shadow {
+  @apply shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100;
+}
